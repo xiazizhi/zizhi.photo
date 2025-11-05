@@ -1,0 +1,283 @@
+body, html {
+  font-family: "Cormorant Garamond", serif !important;
+  font-weight: 500;              /* 这个权重最接近印刷厚度 */
+  letter-spacing: 0.03em;        /* 微微拉开字距 */
+  line-height: 1.45;             /* 行距不要太挤 */
+  color: hsl(0, 0%, 0%);                /* 那种柔红 */
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+    background: #ffffff;
+  overflow: hidden;
+  cursor: none; /* 隐藏默认鼠标 */
+}
+
+#trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#crayon {
+  position: fixed;
+  font-size: 24px;
+  z-index: 2;
+  pointer-events: none;
+  transform: translate(-50%, -50%) rotate(-25deg);
+  transition: transform 0.1s ease-out;
+}
+/* 主体结构 */
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 6rem 8rem;
+  color: #222;
+}
+
+.left ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.left li {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  cursor: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.left li:hover {
+  color: #d22;
+}
+
+.right {
+  width: 55%;
+  height: 80vh;
+  position: relative;
+}
+
+.right img {
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  transition: opacity 0.6s ease;
+}
+/* ===========================
+   SWISS STYLE TYPOGRAPHY PAGE
+   =========================== */
+t-align: righ
+
+/* 页面整体 */
+.homepage {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  color: #000;
+  font-family: "Helvetica Neue", "Cormorant Garamond", serif;
+  letter-spacing: 0.05em; /* 字距略宽，印刷感 */
+  font-weight: 400;
+  overflow: hidden;
+}
+
+
+/* 所有文字基础样式 */
+.text {
+  position: absolute;       /* ✅ 让层级起作用 */
+  z-index: 10;   
+  font-family: inherit !important;
+  font-weight: 600;
+  font-size: clamp(0.9rem, 1.4vw, 1.2rem);
+  line-height: 1.45;
+  letter-spacing: 0.025em;
+  color: hsl(0, 0%, 0%);
+  text-transform: none;
+  transition: color 0.3s ease;
+}
+
+/* 鼠标悬停变色 */
+.text:hover {
+  color: #c02f2f;
+}
+
+/* 安全定位：不会出界、视觉平衡 */
+.t1 { top: 12%; left: 10%; }
+.t2 { top: 24%; right: 10%; text-align: right; }
+.t3 { top: 44%; left: 12%; }
+.t4 { top: 60%; right: 12%; text-align: right; }
+.t5 { bottom: 14%; left: 14%; }
+.t6 { bottom: 12%; right: 14%; text-align: right; }
+
+/* 图片展示区 */
+.right {
+  position: fixed;
+  top: 50%;
+  right: 8vw;
+  transform: translateY(-50%);
+  width: 38vw;
+  height: 70vh;
+  z-index: 0;
+}
+
+.right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.footer {
+  position: fixed;
+  bottom: 2vh;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  color: rgb(0, 0, 0);       /* 纯黑 */
+  opacity: 1 !important;     /* 不透明，禁止继承透明度 */
+  mix-blend-mode: normal;    /* 禁止和背景混合颜色 */
+  isolation: isolate;        /* 脱离父级透明层影响 */
+  z-index: 99999;
+}
+
+.footer a {
+  text-decoration: none;
+  color: rgb(0, 0, 0) !important;  /* 强制纯黑 */
+}
+
+.footer:hover {
+  opacity: 1;
+  color: rgb(0, 0, 0);
+}
+.video-container {
+  position: absolute;
+  top: 45%;             /* 稍微靠上一点 */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 220px;         /* ✅ 小方块尺寸 */
+  height: 220px;        /* ✅ 一定要和 width 一样，确保正方形 */
+  overflow: hidden;
+  border-radius: 0;     /* ✅ 完全去掉圆角 */
+  z-index: 1;
+}
+#hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* ✅ 让视频完全铺满方块 */
+  filter: brightness(0.98) contrast(1.05);
+  pointer-events: none;
+  border-radius: 0;     /* ✅ 确保视频也无圆角 */
+}
+.right {
+  position: fixed;
+  top: 50%;
+  right: 8vw;
+  transform: translateY(-50%);
+  width: 40vw;
+  height: 80vh;
+  z-index: 0;
+}
+
+.right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* ===========================
+   视频淡出 & 诗句淡入效果
+   =========================== */
+
+/* 🌫️ 默认视频可见 */
+.video-container {
+  opacity: 1;
+}
+
+.video-container.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ✍️ 诗句（默认隐藏） */
+/* ✨ 诗句（默认隐藏，居中位置） */
+.poem {
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: hsl(0, 95%, 49%);
+  line-height: 1.65;
+  text-align: center;
+  width: 28%;
+  transition: opacity 1.2s ease, transform 1.2s ease;
+  z-index: 9999;
+}
+
+/* 🌸 淡入状态 */
+.poem.visible {
+  opacity: 1;
+  transform: translate(-50%, -53%);
+}
+
+/* 🩶 右侧显示时的布局 */
+.poem.right-align {
+  left: 28%;           /* 靠右 */
+  text-align: right;
+  transform: translate(-50%, -50%);
+}
+
+/* 🩶 左侧显示时的布局 */
+.poem.left-align {
+  left: 72%;           /* 靠左 */
+  text-align: left;
+  transform: translate(-50%, -50%);
+}
+
+
+/* 图片默认在右边 */
+.right {
+  position: fixed;
+  top: 50%;
+  right: 8vw;
+  transform: translateY(-50%);
+  width: 38vw;
+  height: 70vh;
+  z-index: 0;
+  transition: all 0.8s ease;
+}
+
+/* 切换到左边显示时 */
+.right.left {
+  right: auto;
+  left: 8vw;
+  transform: translateY(-50%);
+}
